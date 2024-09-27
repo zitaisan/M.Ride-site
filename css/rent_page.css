@@ -4,7 +4,7 @@ body {
 }
 li {
     list-style-type: none;
-    
+    color: #000000;
 }
 
 /* Основная навигация: используем flex для горизонтальной раскладки */
@@ -16,6 +16,35 @@ li {
     padding-top: 20px;;
     padding-bottom: 40px;
     font-family: monospace, 'Inter';
+    
+}
+.tabinfo{
+    height:303px;
+    padding-top: 120px;
+    
+}
+.tabinfo h1{
+    font-size: 7em;
+    padding-bottom: 24px;
+    font-style:normal;
+    
+}
+.tabinfo li{
+    display:flex;
+    align-items: center;
+    
+    justify-content:center;
+
+
+}
+.tabinfo ul{
+    font-size: 1.5em;
+    display:flex;
+    justify-content:center;
+    gap: 10px;
+}
+.where{
+    color:#6687ac;
 }
 .menu
 {
@@ -70,26 +99,6 @@ li {
     align-items: center;
 }
 
-.wallpaper {
-    background-image: url('../image/vell.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height:100vh; /* Задайте высоту для блока */
-    position: relative;
-
-}
-.wallpaper button {
-    position: absolute; /* Позволяет позиционировать кнопку относительно родительского блока */
-    bottom: 60px; /* Отступ от нижнего края */
-    right: 60px; /* Отступ от левого края */
-    padding: 17px 40px; /* Отступы внутри кнопки */
-    font-size: 1.5em; /* Размер шрифта */
-    cursor: pointer; /* Указатель при наведении */
-    font-weight: bold;
-    border-radius: 20px;
-    font-family: monospace, 'Inter';
-}
 /* Дополнительные стили для мобильной версии */
 @media (max-width: 768px) {
     .hNavigation {
@@ -142,78 +151,49 @@ html, body {
     margin-left: auto; /* Этот трюк выравнивает .links вправо */
     font-size: 1.5em;
     padding-right: 60px;
-    
 }
 /*Убрать полосу прокрутки для всей страницы*/
 ::-webkit-scrollbar {
     width: 0;
   }
-.elem {
-    display: flex; /* Используем flexbox */
-    justify-content: center; /* Центрируем элементы по горизонтали */
-    align-items: center; /* Центрируем элементы по вертикали */
-    gap: 20px; /* Расстояние между элементами */
-    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку при необходимости */
-    padding-top: 100px;
+  .bikeblock {
+    padding-top: 120px;
     padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца */
+    grid-template-rows: repeat(2, 1fr);    /* Две строки */
+    gap: 60px;                             /* Расстояние между блоками */
+    justify-content: center;               /* Горизонтальное выравнивание */
+    align-items: center;                   /* Вертикальное выравнивание */
+    width:600px;
+    margin: 0 auto;                        /* Центрируем контейнер по горизонтали */
+
 }
 
-/* Стили для Ablock */
-.Ablock {
-    list-style: none; /* Убираем маркеры списка */
-    padding: 20px; /* Внутренние отступы */
-    border: 1px solid #ccc; /* Рамка для визуализации */
-    border-radius: 8px; /* Закругление углов */
-    left: 40px; /* Центрирование текста */
-    min-width: 320px; /* Минимальная ширина для элементов */
-    height:auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color:#ffffff;
-    font-size: 1.1em;
-    font-weight: bold;
+.bikeblock ul {
+    list-style-type: none;                 /* Убираем маркеры списка */
+    justify-content: space-between;
+    width:300px;                          /* Фиксированная ширина блока */
+    height:500px;                         /* Фиксированная высота блока */
+    display: flex;                         /* Flexbox для контента */
+    flex-direction: column;                /* Вертикальная ориентация контента */
     
 }
-.Ablock b{
-    font-size:48px;
-    color: #333333;
-    margin-bottom: 80px;
+
+.bikeblock img {
+    width: 300px;                           /* Изображение занимает всю ширину блока */
+    height: 300px;                          /* Сохраняем пропорции изображения */
+    padding-top:100px;
+    max-height:300px;
+    padding-bottom: 10px;
+}
+.bikeblock li{
+    font-size: 1.2em;
+    padding-bottom:20px;
+    color:#5a5a5a;
+    flex-wrap: wrap;
+}
+.bikeblock b{
+    color: #000000;
     
-}
-.Ablock li{
-    color:#666666;
-    padding-bottom: 13px;;
-}
-ul.list {
-    list-style: none; /* Убираем стандартные маркеры списка */
-    padding-left: 0; /* Убираем отступы */
-}
-
-ul.list li {
-    position: relative; /* Позволяет использовать псевдоэлемент */
-    padding-left: 25px; /* Отступ для галочки */
-    line-height: 1.5; /* Увеличиваем высоту строки */
-}
-
-ul.list li::before {
-    content: '\2714'; /* Символ галочки (✔) Unicode */
-    color:#666666; /* Цвет галочки */
-    font-weight: bold; /* Жирная галочка */
-    position: absolute; /* Абсолютное позиционирование */
-    left: 0; /* Расположение слева */
-    top: 25%; /* Центрируем по вертикали относительно строки */
-    transform: translateY(-50%); /* Выравниваем по вертикали */
-}
-.Ablock button {
-    padding: 12px 15px; /* Отступы внутри кнопки */
-    background-color: #F2F2F2; /* Цвет фона кнопки */
-    color: rgb(0, 0, 0); /* Цвет текста кнопки */
-    border: none; /* Убираем рамку */
-    border-radius: 5px; /* Закругление углов кнопки */
-    cursor: pointer; /* Указатель при наведении */
-    border-radius: 8px;       /* Закругляем углы блока */
-    font-weight: bold;              /* Фиксированная ширина блока */    
-}
-
-.Ablock button:hover {
-    background-color: #dadada;; /* Цвет фона кнопки при наведении */
 }

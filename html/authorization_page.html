@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='../css/authorization_page.css'>
+    <title>Авторизация</title>
+</head>
+<body>
+    <header>
+                
+        <nav class="menu">
+            <ul class="hNavigation">
+                <li><a href = "main_page.html" class="mride">M.RIDE</a></li>
+                <li>
+                    <ul class="links">
+                        <li><a href = "about_page.html">О НАС</a></li>
+                        <li><a href = "rent_page.html">АРЕНДА</a></li>
+                        <li><a href = "contacts_page.html">КОНТАКТЫ</a></li>
+                        <li><a href = "search_page.html"><img src="../image/magnify.png" class="menuimg"></a></li>
+                        <li><a href = "authorization_page.html"><img src="../image/electric_bike.png" class="menuimg"></a></li> 
+                    </ul>
+                </li>
+            </ul>
+        </nav>  
+     
+    </header>
+    <main>
+        
+        <article class="loginput">
+            <h1>АВТОРИЗАЦИЯ</h1>
+            <form action="" method="POST" id ="login-form" class="form-contact">
+                    <div class="stack">
+                        <li><input type="text" name="login" id="login" placeholder="Ваш логин" required /></li>
+                        <li><input type="password" name="password" id="password" placeholder="Ваш пароль" required /></li>
+                        <li><input type="submit" value="Отправить" /></li>  
+                        <li><a href = "registration_page.html">Зарегистрироваться...</a></li></li>
+                    </div>
+            </form>
+            
+            <script src="auth.js"></script>
+            <div id="error-message"></div>
+        </article>
+    </main> 
+
+    <footer>
+    <nav class="fmenu">
+        <li><ul class="fNavigation">
+            <h1>НАВИГАЦИЯ</h1>
+            <li><a href = "main_page.html">Главная</a></li>
+            <li><a href = "rent_page.html">Аренда</a></li>
+            <li><a href = "about_page.html">О нас</a></li>
+            <li><a href = "contacts_page.html">Контакты</a></li>
+        </ul></li>  
+        <li><ul class="socialmedia">
+            <li><img src="../image/facebook.png"></li>
+            <li><img src="../image/instagram.png"></li>
+            <li><img src="../image/twitter.png"></li>
+            <li><img src="../image/email_outline.png"></li>
+        </ul></li>
+    </nav>      
+    </footer>
+</body>
+</html>

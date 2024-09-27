@@ -70,26 +70,6 @@ li {
     align-items: center;
 }
 
-.wallpaper {
-    background-image: url('../image/vell.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height:100vh; /* Задайте высоту для блока */
-    position: relative;
-
-}
-.wallpaper button {
-    position: absolute; /* Позволяет позиционировать кнопку относительно родительского блока */
-    bottom: 60px; /* Отступ от нижнего края */
-    right: 60px; /* Отступ от левого края */
-    padding: 17px 40px; /* Отступы внутри кнопки */
-    font-size: 1.5em; /* Размер шрифта */
-    cursor: pointer; /* Указатель при наведении */
-    font-weight: bold;
-    border-radius: 20px;
-    font-family: monospace, 'Inter';
-}
 /* Дополнительные стили для мобильной версии */
 @media (max-width: 768px) {
     .hNavigation {
@@ -142,78 +122,86 @@ html, body {
     margin-left: auto; /* Этот трюк выравнивает .links вправо */
     font-size: 1.5em;
     padding-right: 60px;
-    
 }
+
+.stack {
+    display:block; 
+}
+
 /*Убрать полосу прокрутки для всей страницы*/
 ::-webkit-scrollbar {
     width: 0;
   }
-.elem {
-    display: flex; /* Используем flexbox */
-    justify-content: center; /* Центрируем элементы по горизонтали */
-    align-items: center; /* Центрируем элементы по вертикали */
-    gap: 20px; /* Расстояние между элементами */
-    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку при необходимости */
-    padding-top: 100px;
-    padding-bottom: 100px;
+  .form-contact {
+    width: 100%; /* Задаем ширину формы */
+    padding-top: 15px;
+    justify-content: center;
+    display:flex;   
 }
 
-/* Стили для Ablock */
-.Ablock {
-    list-style: none; /* Убираем маркеры списка */
-    padding: 20px; /* Внутренние отступы */
-    border: 1px solid #ccc; /* Рамка для визуализации */
-    border-radius: 8px; /* Закругление углов */
-    left: 40px; /* Центрирование текста */
-    min-width: 320px; /* Минимальная ширина для элементов */
-    height:auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color:#ffffff;
-    font-size: 1.1em;
+.stack {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Отступ между элементами */
+}
+.stack a{
+    text-decoration: none;
+    align-items: center;
     font-weight: bold;
-    
+    color:#6687ac;
+    opacity: 80%;
+    align-items: center;
+
 }
-.Ablock b{
-    font-size:48px;
-    color: #333333;
-    margin-bottom: 80px;
-    
-}
-.Ablock li{
-    color:#666666;
-    padding-bottom: 13px;;
-}
-ul.list {
-    list-style: none; /* Убираем стандартные маркеры списка */
-    padding-left: 0; /* Убираем отступы */
+.form-contact input[type="text"],
+.form-contact input[type="password"],
+.form-contact input[type="submit"] {
+    width: 300px; /* Ширина поля на всю доступную область */
+    padding: 10px;
+    background-color: #f0f0f0; /* Серый фон для полей ввода */
+    color: #000000; /* Черный текст */
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 10px; /* Закругленные края */
+    font-size: 1em;
+    line-height: 1.5; /* Высота строки */
+    font-family: Arial, sans-serif; /* Общий шрифт для всех полей */
+
 }
 
-ul.list li {
-    position: relative; /* Позволяет использовать псевдоэлемент */
-    padding-left: 25px; /* Отступ для галочки */
-    line-height: 1.5; /* Увеличиваем высоту строки */
+.form-contact input[type="text"]:focus,
+.form-contact input[type="password"]:focus,
+.form-contact input[type="submit"]:focus {
+    outline: none; /* Убираем стандартный фокус */
+    border-color: #888; /* Изменение цвета рамки при фокусе */
 }
 
-ul.list li::before {
-    content: '\2714'; /* Символ галочки (✔) Unicode */
-    color:#666666; /* Цвет галочки */
-    font-weight: bold; /* Жирная галочка */
-    position: absolute; /* Абсолютное позиционирование */
-    left: 0; /* Расположение слева */
-    top: 25%; /* Центрируем по вертикали относительно строки */
-    transform: translateY(-50%); /* Выравниваем по вертикали */
-}
-.Ablock button {
-    padding: 12px 15px; /* Отступы внутри кнопки */
-    background-color: #F2F2F2; /* Цвет фона кнопки */
-    color: rgb(0, 0, 0); /* Цвет текста кнопки */
-    border: none; /* Убираем рамку */
-    border-radius: 5px; /* Закругление углов кнопки */
-    cursor: pointer; /* Указатель при наведении */
-    border-radius: 8px;       /* Закругляем углы блока */
-    font-weight: bold;              /* Фиксированная ширина блока */    
+.form-contact input[type="submit"] {
+    background-color: #000000; /* Черный фон для кнопки */
+    color: #ffffff; /* Белый текст */
+    cursor: pointer; /* Курсор указателя при наведении */
+    text-align: center; /* Центрирование текста внутри кнопки */
 }
 
-.Ablock button:hover {
-    background-color: #dadada;; /* Цвет фона кнопки при наведении */
+.form-contact input[type="submit"]:hover {
+    background-color: #333333; /* Темнее при наведении */
+}
+
+.loginput h1{
+    justify-content: center;
+    display: flex;
+    font-size: 1.5em;
+}
+.loginput {
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+#error-message{
+    justify-content: center;
+    display: flex;
+    font-size: 1.5em;
+    color:#ad0909;
+    padding-top:20px;
 }

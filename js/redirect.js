@@ -1,0 +1,1 @@
+window.location.href = 'html/main_page.html';

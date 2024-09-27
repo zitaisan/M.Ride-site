@@ -1,0 +1,198 @@
+/* Убираем маркеры списка и настраиваем общий цвет текста */
+body {
+    font-family: 'Inter';
+}
+li {
+    list-style-type: none;
+    
+}
+
+/* Основная навигация: используем flex для горизонтальной раскладки */
+.hNavigation {
+    display: flex;
+    justify-content: space-between; /* Одна часть будет в центре, другая справа */
+    padding: 21px;               /* Отступы от краев экрана */
+    padding-right: 60px;
+    padding-top: 20px;;
+    padding-bottom: 40px;
+    font-family: monospace, 'Inter';
+}
+.menu
+{
+    
+    background-color:#ffffff, 0.9; /* Цвет фона блока (зеленый, можете выбрать другой цвет) */
+    border-radius: 20px;       /* Закругляем углы блока */
+    width: 100%;              /* Фиксированная ширина блока */
+    height: min-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем легкую тень для объема */
+    
+}
+
+/* Убираем отступы у элементов списка */
+.hNavigation li {
+    margin-right: 0;
+    align-items: center;
+    opacity:100%;
+}
+
+/* Подменю с ссылками (будет выровнено справа) */
+.links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin-left: auto; /* Этот трюк выравнивает .links вправо */
+    font-size: 1.5em;
+    padding-top: 15px;;
+    
+}
+
+/* Стиль для логотипа (центральной ссылки) */
+.mride {
+    position: absolute;            /* Абсолютное позиционирование */
+    left: 50%;                     /* Смещаем на 50% от левого края */
+    transform: translateX(-50%);   /* Центрируем по оси X */
+    color: #110713;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 3em;
+    letter-spacing: 10px;
+    opacity: 100%;
+    text-align: center;    
+}
+
+/* Стили для ссылок в подменю */
+.links a {
+    text-decoration: none;
+    align-items: center;
+    font-weight: bold;
+    color: #110713;
+    opacity: 80%;
+    align-items: center;
+}
+
+/* Дополнительные стили для мобильной версии */
+@media (max-width: 768px) {
+    .hNavigation {
+        flex-direction: column; /* Вертикальная раскладка на мобильных устройствах */
+        height: auto; /* Убираем ограничение по высоте */
+    }
+    .links {
+        margin-left: 0; /* Убираем отступы на мобильных устройствах */
+        justify-content: center;
+    }
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+.fNavigation {
+
+}
+.fNavigation h1{
+    padding-bottom: 10px;
+}
+.fNavigation li{
+    line-height: 20px;
+    font-size: 1.2em;
+    padding-bottom: 5px;
+}
+.fNavigation a{
+    text-decoration: none;
+    list-style-type: none;
+    color:#000000;
+}
+.fmenu{
+    color:#000000;
+    padding-top: 80px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between; /* Одна часть будет в центре, другая справа */
+}
+.socialmedia{
+    margin-left: auto;
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* Этот трюк выравнивает .links вправо */
+    font-size: 1.5em;
+    padding-right: 60px;
+}
+
+.stack {
+    display:block; 
+}
+
+/*Убрать полосу прокрутки для всей страницы*/
+::-webkit-scrollbar {
+    width: 0;
+  }
+  .form-contact {
+    width: 100%; /* Задаем ширину формы */
+    padding-top: 15px;
+    justify-content: center;
+    display: flex;
+}
+
+.stack {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Отступ между элементами */
+}
+
+.form-contact input[type="text"],
+.form-contact input[type="email"], /* Селектор для поля email */
+.form-contact input[type="password"],
+.form-contact input[type="submit"] {
+    width: 300px; /* Ширина поля */
+    padding: 10px;
+    background-color: #f0f0f0; /* Серый фон для полей ввода */
+    color: #000000; /* Черный текст */
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 10px; /* Закругленные края */
+    font-size: 1em;
+    line-height: 1.5; /* Высота строки */
+    font-family: Arial, sans-serif; /* Общий шрифт для всех полей */
+}
+
+.form-contact input[type="text"]:focus,
+.form-contact input[type="email"]:focus, /* Исправление: добавлен фокус для поля email */
+.form-contact input[type="password"]:focus, /* Исправление: добавлен фокус для password */
+.form-contact input[type="submit"]:focus {
+    outline: none; /* Убираем стандартный фокус */
+    border-color: #888; /* Изменение цвета рамки при фокусе */
+}
+
+.form-contact input[type="submit"] {
+    background-color: #000000; /* Черный фон для кнопки */
+    color: #ffffff; /* Белый текст */
+    cursor: pointer; /* Курсор указателя при наведении */
+    text-align: center; /* Центрирование текста внутри кнопки */
+}
+
+.form-contact input[type="submit"]:hover {
+    background-color: #333333; /* Темнее при наведении */
+}
+.loginput h1{
+    justify-content: center;
+    display: flex;
+    font-size: 1.5em;
+}
+.loginput {
+    padding-top: 120px;
+}
+#error-message{
+    justify-content: center;
+    display: flex;
+    font-size: 1.5em;
+    color:#ad0909;
+    padding-top:20px;
+}
